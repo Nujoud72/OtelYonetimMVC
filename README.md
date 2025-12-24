@@ -40,13 +40,10 @@ Proje, bir otelin temel operasyonel süreçlerinin dijital ortamda yönetilmesin
 ![Admin Dashboard](Otelmvc%20ekranlari/Admin%20kısmındaki%20Dashboard%20ekranı.png)
 
 ### Admin – Oda Yönetimi
-![Oda Yönetimi](Otelmvc%20ekranlari/Admin%20kısmındaki%20Oda%20Yönetim%20ekranı.png)
-
-### Admin – Oda Düzenleme
-![Oda Düzenleme](Otelmvc%20ekranlari/Admin%20kısmında%20oda%20düzenleme%20sayfası.png)
+![Admin – Oda Yönetimi](Otelmvc%20ekranlari/Admin%20kısmındaki%20Oda%20Yönetim%20ekranı.png)
 
 ### Admin – Oda Silme
-![Oda Silme](Otelmvc%20ekranlari/Admin%20kısmındaki%20oda%20silme%20sayfası.png)
+![Admin – Oda Silme](Otelmvc%20ekranlari/Admin%20kısmındaki%20oda%20silme%20sayfası.png)
 
 ### Resepsiyon Dashboard
 ![Resepsiyon Dashboard](Otelmvc%20ekranlari/Resepsiyon%20kısmında%20dashboard%20ekranı.png)
@@ -67,7 +64,6 @@ Proje, bir otelin temel operasyonel süreçlerinin dijital ortamda yönetilmesin
 ![Ödeme Alma](Otelmvc%20ekranlari/Rezervasyon%20ödeme%20alma%20sayfası.png)
 
 ---
-
 ## 🧪 Test Süreci
 
 Proje kapsamında aşağıdaki testler gerçekleştirilmiştir:
