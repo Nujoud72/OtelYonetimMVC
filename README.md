@@ -37,7 +37,7 @@ Proje, bir otelin temel operasyonel süreçlerinin dijital ortamda yönetilmesin
 ![Giriş Sayfası](Otelmvc%20ekranlari/Giriş%20sayfası.png)
 
 ### Admin Dashboard
-![Admin Dashboard](Otelmvc%20ekranlari/Admin%20kısmındaki%20Dashboard%20ekranı.png)
+![Admin Dashboard](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Admin%20%20kısmında%20oda%20düzenleme%20sayfası.png)
 
 ### Admin – Oda Yönetimi
 ![Admin – Oda Yönetimi](Otelmvc%20ekranlari/Admin%20kısmındaki%20Oda%20Yönetim%20ekranı.png)
