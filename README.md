@@ -1,83 +1,109 @@
-# Otel Yönetim Sistemi (OtelYonetimMVC)
+# 🏨 Otel Yönetim Sistemi (OtelYonetimMVC)
 
 Bu repository, **Yazılım Doğrulama ve Geçerleme (V&V)** dersi kapsamında geliştirilen  
-**Otel Yönetim Sistemi** MVC projesini içermektedir.
+**Otel Yönetim Sistemi** MVC tabanlı bir web uygulamasını içermektedir.
 
-Proje, bir otelin temel operasyonel süreçlerinin dijital ortamda yönetilmesini amaçlamaktadır.
+Projenin amacı, bir otelin temel operasyonel süreçlerini (oda yönetimi, rezervasyon takibi, ödeme ve check-out işlemleri) dijital ortamda güvenilir ve düzenli bir şekilde yönetmektir.
+
+Proje, **ASP.NET Core MVC mimarisi** kullanılarak geliştirilmiş ve doğrulama & geçerleme süreçleri akademik standartlara uygun şekilde yürütülmüştür.
 
 ---
 
 ## 📁 Proje İçeriği
 
 - **Controllers/** → MVC controller dosyaları  
-- **Models/** → Veri modelleri  
+- **Models/** → Uygulamada kullanılan veri modelleri  
 - **Data/** → Veritabanı bağlantısı ve seed işlemleri  
-- **Migrations/** → Entity Framework migration dosyaları  
-- **OtelYonetimMVC.Tests/** → Test projesi  
-- **Otelmvc ekranlari/** → Uygulama arayüz ekran görüntüleri  
+- **Migrations/** → Entity Framework Core migration dosyaları  
+- **OtelYonetimMVC.Tests/** → Unit ve Integration testlerini içeren test projesi  
+- **Otelmvc ekranları/** → Uygulamaya ait arayüz ekran görüntüleri  
 
 ---
 
 ## 🧩 Uygulama Özellikleri
 
 - Kullanıcı giriş ekranı  
-- Admin paneli (dashboard)  
+- Rol bazlı yetkilendirme (Admin / Resepsiyon)  
+- Admin paneli (Dashboard)  
 - Oda yönetimi (listeleme, düzenleme, silme)  
 - Rezervasyon yönetimi  
-- Yeni rezervasyon ekleme  
+- Yeni rezervasyon oluşturma  
 - Rezervasyon düzenleme ve silme  
-- Ödeme alma işlemi  
-- Resepsiyon ve admin rolleri için ayrı ekranlar  
+- Ödeme alma işlemleri  
+- Check-out işlemleri  
+- Kullanıcıdan onay alınan kritik işlemler (silme vb.)
 
 ---
+
+## ⚙️ Kullanılan Teknolojiler
+
+Projede aşağıdaki teknolojiler ve araçlar kullanılmıştır:
+
+- **ASP.NET Core MVC** → Uygulama mimarisi  
+- **C#** → Sunucu tarafı programlama dili  
+- **Entity Framework Core** → ORM ve veritabanı işlemleri  
+- **Code First yaklaşımı** → Veritabanı tasarımı  
+- **SQL Server / LocalDB** → Veritabanı yönetimi  
+- **xUnit** → Unit test framework’ü  
+- **Visual Studio** → Geliştirme ortamı  
+- **HTML5 / CSS / Bootstrap** → Kullanıcı arayüzü  
+- **Git & GitHub** → Versiyon kontrolü ve kaynak kod yönetimi  
+
+---
+
 ## 🖼️ Uygulama Ekran Görüntüleri
 
 ### Giriş Sayfası
-![Giriş Sayfası](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Giriş%20sayfası.png)
+![Giriş Sayfası](Otelmvc%20ekranları/Giriş%20sayfası.png)
 
 ### Admin Dashboard
-![Admin Dashboard](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Admin%20kısmındaki%20Dashboard%20ekranı.png)
+![Admin Dashboard](Otelmvc%20ekranları/Admin%20kısmındaki%20Dashboard%20ekranı.png)
 
 ### Admin – Oda Yönetimi
-![Admin Oda Yönetimi](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Admin%20kısmındaki%20Oda%20Yönetim%20ekranı.png)
+![Admin Oda Yönetimi](Otelmvc%20ekranları/Admin%20kısmındaki%20Oda%20Yönetim%20ekranı.png)
 
 ### Admin – Oda Silme
-![Admin Oda Silme](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Admin%20kısmındaki%20oda%20silme%20sayfası.png)
+![Admin Oda Silme](Otelmvc%20ekranları/Admin%20kısmındaki%20oda%20silme%20sayfası.png)
 
 ### Resepsiyon Dashboard
-![Resepsiyon Dashboard](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Resepsiyon%20kısmında%20dashboard%20ekranı.png)
+![Resepsiyon Dashboard](Otelmvc%20ekranları/Resepsiyon%20kısmında%20dashboard%20ekranı.png)
 
 ### Resepsiyon – Rezervasyonlar
-![Rezervasyonlar](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Resepsiyon%20kısmındaki%20rezervasyonlar%20ekranı.png)
+![Rezervasyonlar](Otelmvc%20ekranları/Resepsiyon%20kısmındaki%20rezervasyonlar%20ekranı.png)
 
 ### Resepsiyon – Yeni Rezervasyon
-![Yeni Rezervasyon](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Resepsiyon%20kısmında%20yeni%20rezervasyon%20ekleme%20sayfası.png)
+![Yeni Rezervasyon](Otelmvc%20ekranları/Resepsiyon%20kısmında%20yeni%20rezervasyon%20ekleme%20sayfası.png)
 
 ### Rezervasyon Düzenleme
-![Rezervasyon Düzenleme](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Rezervasyon%20düzenleme%20sayfası.png)
+![Rezervasyon Düzenleme](Otelmvc%20ekranları/Rezervasyon%20düzenleme%20sayfası.png)
 
 ### Rezervasyon Silme
-![Rezervasyon Silme](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Rezervasyon%20silme%20sayfası.png)
+![Rezervasyon Silme](Otelmvc%20ekranları/Rezervasyon%20silme%20sayfası.png)
 
 ### Rezervasyon Ödeme Alma
-![Ödeme Alma](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Rezervasyon%20ödeme%20alma%20sayfası.png)
+![Ödeme Alma](Otelmvc%20ekranları/Rezervasyon%20ödeme%20alma%20sayfası.png)
 
 ---
+
 ## 🧪 Test Süreci
 
-Proje kapsamında aşağıdaki testler gerçekleştirilmiştir:
+Proje kapsamında aşağıdaki test seviyeleri uygulanmıştır:
 
-- Unit Testler  
-- Integration Testler  
-- System Testler  
-- User Acceptance Test (UAT)  
+- **Unit Testler** (xUnit ile)  
+- **Integration Testler**  
+- **System Testler**  
+- **User Acceptance Test (UAT)**  
 
-Test senaryoları, gereksinimler ile **RTM (Requirements Traceability Matrix)** üzerinden eşleştirilmiştir.
+Test senaryoları ile fonksiyonel gereksinimler,  
+**RTM (Requirements Traceability Matrix)** kullanılarak eşleştirilmiştir.
+
+Tüm testler akademik standartlara uygun şekilde raporlanmıştır.
 
 ---
 
 ## 📌 Notlar
 
-- Proje akademik amaçlıdır.  
-- MVC mimarisi kullanılmıştır.  
-- Dokümanlar ve test raporları proje klasör yapısına uygun şekilde sunulmuştur.  
+- Bu proje **akademik amaçlıdır**.  
+- MVC mimarisi ve katmanlı yapı kullanılmıştır.  
+- Test dokümanları ve raporlar, proje klasör yapısına uygun şekilde sunulmuştur.  
+- Proje, Yazılım Doğrulama ve Geçerleme (V&V) dersinin gereksinimlerini karşılamaktadır.
