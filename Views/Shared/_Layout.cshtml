@@ -1,0 +1,83 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+    var role = Context.Session.GetString("Role");
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString();
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>Otel Yönetim Sistemi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link href="~/css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body>
+
+@if (role == null)
+{
+    @RenderBody()
+}
+else
+{
+    <div class="sidebar p-3">
+        <h4 class="text-center mb-4">
+            <i class="fa-solid fa-hotel"></i><br />
+            Otel Paneli
+        </h4>
+
+        @* YÖNETİCİ *@
+        @if (role == "Yonetici")
+        {
+            <a class="@(controller == "Home" ? "active" : "")" href="/Home">
+                <i class="fa-solid fa-chart-line"></i> Dashboard
+            </a>
+
+            <a class="@(controller == "Rooms" ? "active" : "")" href="/Rooms">
+                <i class="fa-solid fa-bed"></i> Oda Yönetimi
+            </a>
+        }
+
+        @* RESEPSİYON *@
+        @if (role == "Resepsiyon")
+        {
+            <a class="@(controller == "Home" ? "active" : "")" href="/Home">
+                <i class="fa-solid fa-chart-line"></i> Dashboard
+            </a>
+
+            <a class="@(controller == "Reservations" ? "active" : "")" href="/Reservations">
+                <i class="fa-solid fa-calendar-check"></i> Rezervasyonlar
+            </a>
+        }
+
+        <hr class="text-secondary mt-4">
+
+        <small class="text-muted d-block mb-2">
+            Rol: <strong>@role</strong>
+        </small>
+
+        <a class="text-danger" href="/Login/Logout">
+            <i class="fa-solid fa-right-from-bracket"></i> Çıkış Yap
+        </a>
+    </div>
+
+    <div class="main-content">
+        @RenderBody()
+
+        <footer class="text-muted small text-center">
+            Otel Yönetim Sistemi © 2025
+        </footer>
+    </div>
+}
+
+</body>
+</html>

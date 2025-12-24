@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36401.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtelYonetimMVC", "OtelYonetimMVC.csproj", "{3FE63D19-0674-40D4-BB86-E84721E10F00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtelYonetimMVC.Tests", "..\OtelYonetimMVC.Tests\OtelYonetimMVC.Tests.csproj", "{AE4D49E0-C8D1-434B-84E6-7D22849941D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FE63D19-0674-40D4-BB86-E84721E10F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FE63D19-0674-40D4-BB86-E84721E10F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FE63D19-0674-40D4-BB86-E84721E10F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FE63D19-0674-40D4-BB86-E84721E10F00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE4D49E0-C8D1-434B-84E6-7D22849941D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE4D49E0-C8D1-434B-84E6-7D22849941D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE4D49E0-C8D1-434B-84E6-7D22849941D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE4D49E0-C8D1-434B-84E6-7D22849941D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE7CAC72-8F81-4119-8DD0-1B7CA9737E29}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,29 @@
+﻿@model Room
+
+<h2 class="mb-3">Yeni Oda Ekle</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+
+<div class="card p-3">
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label">Oda Numarası</label>
+            <input class="form-control" name="RoomNumber" type="number" value="@Model?.RoomNumber" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Durum</label>
+            <select class="form-select" name="Status">
+                <option value="Boş">Boş</option>
+                <option value="Dolu">Dolu</option>
+                <option value="Temizlikte">Temizlikte</option>
+            </select>
+        </div>
+
+        <button class="btn btn-primary">Kaydet</button>
+        <a class="btn btn-outline-secondary" href="/Rooms">İptal</a>
+    </form>
+</div>

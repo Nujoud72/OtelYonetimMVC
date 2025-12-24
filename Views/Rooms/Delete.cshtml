@@ -1,0 +1,18 @@
+﻿@model Room
+
+<h2 class="mb-3 text-danger">Oda Sil</h2>
+
+<div class="alert alert-warning">
+    <strong>Uyarı:</strong> Oda <strong>@Model.RoomNumber</strong> silinecek. Emin misiniz?
+</div>
+
+<div class="card p-3">
+    <p><strong>Oda:</strong> @Model.RoomNumber</p>
+    <p><strong>Durum:</strong> @Model.Status</p>
+
+    <form method="post" action="/Rooms/DeleteConfirmed">
+        <input type="hidden" name="roomNumber" value="@Model.RoomNumber" />
+        <button class="btn btn-danger">Evet, Sil</button>
+        <a class="btn btn-outline-secondary" href="/Rooms">Vazgeç</a>
+    </form>
+</div>

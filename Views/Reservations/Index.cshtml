@@ -1,0 +1,123 @@
+﻿@using OtelYonetimMVC.Models
+@model List<Reservation>
+
+@{
+    var role = Context.Session.GetString("Role");
+    bool canEdit = role == "Resepsiyon";
+}
+
+<h2 class="mb-2">Rezervasyonlar</h2>
+
+@if (canEdit)
+{
+    <a class="btn btn-primary mb-3" href="/Reservations/Create">
+        + Yeni Rezervasyon
+    </a>
+}
+
+<div class="card p-3">
+    <table class="table table-striped align-middle">
+        <thead>
+            <tr>
+                <th>Müşteri</th>
+                <th>Oda</th>
+                <th>Giriş</th>
+                <th>Çıkış</th>
+                <th>Durum</th>
+                <th>Ödeme</th>
+                @if (canEdit)
+                {
+                    <th>İşlem</th>
+                }
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var r in Model)
+            {
+                <tr>
+                    <td>@r.CustomerName</td>
+                    <td>@r.Room?.RoomNumber</td>
+                    <td>@r.CheckInDate.ToString("dd.MM.yyyy")</td>
+                    <td>@r.CheckOutDate.ToString("dd.MM.yyyy")</td>
+
+                    <!-- REZERVASYON DURUMU -->
+                    <td>
+                        @if (r.Status == ReservationStatus.CheckIn)
+                        {
+                            <span class="badge bg-success">Devam Ediyor</span>
+                        }
+                        else if (r.Status == ReservationStatus.CheckOut)
+                        {
+                            <span class="badge bg-warning text-dark">Temizlikte</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-secondary">Tamamlandı</span>
+                        }
+                    </td>
+
+                    <!-- ÖDEME DURUMU -->
+                    <td>
+                        @if (r.PaymentStatus == PaymentStatus.Paid)
+                        {
+                            <span class="badge bg-success">Ödendi</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger">Ödenmedi</span>
+                        }
+                    </td>
+
+                    @if (canEdit)
+                    {
+                        <td>
+                            <a class="btn btn-sm btn-outline-secondary"
+                               href="/Reservations/Edit?id=@r.Id">
+                                Düzenle
+                            </a>
+
+                            <a class="btn btn-sm btn-outline-danger"
+                               href="/Reservations/Delete?id=@r.Id">
+                                Sil
+                            </a>
+
+                            @* CHECK-OUT *@
+                            @if (r.Status == ReservationStatus.CheckIn)
+                            {
+                                <form asp-action="CheckOut" method="post" style="display:inline;">
+                                    <input type="hidden" name="id" value="@r.Id" />
+                                    @Html.AntiForgeryToken()
+                                    <button class="btn btn-sm btn-warning">
+                                        Check-out
+                                    </button>
+                                </form>
+                            }
+
+                            @* ÖDEME AL *@
+                            @if (r.Status == ReservationStatus.CheckOut && r.PaymentStatus == PaymentStatus.Unpaid)
+                            {
+                                <a class="btn btn-sm btn-outline-success"
+                                   href="/Reservations/Payment?id=@r.Id">
+                                    Ödeme Al
+                                </a>
+                            }
+
+                            @* TAMAMLA *@
+                            @if (r.Status == ReservationStatus.CheckOut && r.PaymentStatus == PaymentStatus.Paid)
+                            {
+                                <form asp-action="Complete" method="post" style="display:inline;">
+                                    <input type="hidden" name="id" value="@r.Id" />
+                                    @Html.AntiForgeryToken()
+                                    <button class="btn btn-sm btn-success">
+                                        Tamamla
+                                    </button>
+                                </form>
+                            }
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

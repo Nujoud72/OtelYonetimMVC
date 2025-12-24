@@ -1,0 +1,46 @@
+﻿@model OtelYonetimMVC.Models.Reservation
+
+<h2 class="mb-3">Yeni Rezervasyon</h2>
+
+<div class="card p-3">
+    <form asp-action="Create" method="post">
+
+        <div class="mb-3">
+            <label class="form-label">Müşteri Adı</label>
+            <input asp-for="CustomerName" class="form-control" />
+            <span asp-validation-for="CustomerName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Oda</label>
+            <select asp-for="RoomId"
+                    asp-items="ViewBag.Rooms"
+                    class="form-select">
+                <option value="">-- Oda seçin --</option>
+            </select>
+            <span asp-validation-for="RoomId" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Giriş Tarihi</label>
+            <input asp-for="CheckInDate" type="date" class="form-control" />
+            <span asp-validation-for="CheckInDate" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Çıkış Tarihi</label>
+            <input asp-for="CheckOutDate" type="date" class="form-control" />
+            <span asp-validation-for="CheckOutDate" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+        <a class="btn btn-outline-secondary" href="/Reservations">İptal</a>
+    </form>
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @Html.ValidationSummary(false)
+        </div>
+    }
+
+</div>

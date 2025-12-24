@@ -1,0 +1,25 @@
+﻿@model Reservation
+
+<h2 class="mb-3 text-danger">Rezervasyon Sil</h2>
+
+<div class="alert alert-warning">
+    Bu rezervasyon silinecek. Emin misiniz?
+</div>
+
+<div class="card p-3">
+    <p><strong>Müşteri:</strong> @Model.CustomerName</p>
+    <p><strong>Oda:</strong> @Model.Room?.RoomNumber</p>
+    <p>
+        <strong>Tarih:</strong>
+        @Model.CheckInDate.ToShortDateString() -
+        @Model.CheckOutDate.ToShortDateString()
+    </p>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="id" value="@Model.Id" />
+        <button class="btn btn-danger">Evet, Sil</button>
+        <a class="btn btn-outline-secondary" href="/Reservations">Vazgeç</a>
+    </form>
+
+</div>

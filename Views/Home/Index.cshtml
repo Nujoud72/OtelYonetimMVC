@@ -1,0 +1,91 @@
+﻿@model OtelYonetimMVC.Models.DashboardVM
+
+<h2 class="mb-1 fw-bold">Yönetici Dashboard</h2>
+<p class="text-muted mb-4">Otel performansı ve sistem durumu</p>
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card stat-card bg-blue p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6>Toplam Oda</h6>
+                    <h2>@Model.TotalRooms</h2>
+                </div>
+                <i class="fa-solid fa-building"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card stat-card bg-green p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6>Dolu Oda</h6>
+                    <h2>@Model.OccupiedRooms</h2>
+                </div>
+                <i class="fa-solid fa-bed"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card stat-card bg-orange p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6>Boş Oda</h6>
+                    <h2>@Model.AvailableRooms</h2>
+                </div>
+                <i class="fa-solid fa-door-open"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card stat-card bg-purple p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6>Temizlikte</h6>
+                    <h2>@Model.CleaningRooms</h2>
+                </div>
+                <i class="fa-solid fa-broom"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-7">
+        <div class="card p-3">
+            <h5>
+                <i class="fa-solid fa-activity me-2"></i>
+                Son Sistem Hareketleri
+            </h5>
+
+            <table class="table table-sm mt-2">
+                @foreach (var item in Model.SystemActivities)
+                {
+                    <tr>
+                        <td>Bilgi</td>
+                        <td>@item</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+    <div class="col-md-5">
+        <div class="card p-3">
+            <h5>
+                <i class="fa-solid fa-circle-info me-2"></i>
+                Yönetici Bilgisi
+            </h5>
+            <p class="text-muted">
+                Bu panel sistemin genel yönetimi için tasarlanmıştır.
+            </p>
+            <p>
+                <strong>Rol:</strong>
+                @Context.Session.GetString("Role")
+            </p>
+        </div>
+    </div>
+</div>
