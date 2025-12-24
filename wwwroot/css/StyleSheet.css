@@ -1,0 +1,59 @@
+﻿body {
+    background-color: #f4f6f9;
+}
+
+.sidebar {
+    background: linear-gradient(180deg, #111827, #020617);
+    color: #fff;
+}
+
+    .sidebar a {
+        color: #cbd5e1;
+        text-decoration: none;
+        padding: 10px 12px;
+        border-radius: 8px;
+        display: block;
+        margin-bottom: 6px;
+        transition: 0.2s;
+    }
+
+        .sidebar a:hover {
+            background-color: #1f2937;
+            color: #fff;
+        }
+
+    .sidebar .active {
+        background-color: #2563eb;
+        color: #fff;
+    }
+
+.stat-card {
+    border: none;
+    border-radius: 14px;
+    color: white;
+}
+
+    .stat-card i {
+        font-size: 28px;
+        opacity: 0.8;
+    }
+
+.bg-blue {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.bg-green {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.bg-orange {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.bg-purple {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+}
+
+.card {
+    border-radius: 14px;
+}
