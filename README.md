@@ -30,38 +30,37 @@ Proje, bir otelin temel operasyonel süreçlerinin dijital ortamda yönetilmesin
 - Resepsiyon ve admin rolleri için ayrı ekranlar  
 
 ---
-
 ## 🖼️ Uygulama Ekran Görüntüleri
 
 ### Giriş Sayfası
-![Giriş Sayfası](Otelmvc%20ekranlari/Giriş%20sayfası.png)
+![Giriş Sayfası](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Giriş%20sayfası.png)
 
 ### Admin Dashboard
-![Admin Dashboard](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Admin%20%20kısmında%20oda%20düzenleme%20sayfası.png)
+![Admin Dashboard](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Admin%20kısmındaki%20Dashboard%20ekranı.png)
 
 ### Admin – Oda Yönetimi
-![Admin – Oda Yönetimi](Otelmvc%20ekranlari/Admin%20kısmındaki%20Oda%20Yönetim%20ekranı.png)
+![Admin Oda Yönetimi](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Admin%20kısmındaki%20Oda%20Yönetim%20ekranı.png)
 
 ### Admin – Oda Silme
-![Admin – Oda Silme](Otelmvc%20ekranlari/Admin%20kısmındaki%20oda%20silme%20sayfası.png)
+![Admin Oda Silme](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Admin%20kısmındaki%20oda%20silme%20sayfası.png)
 
 ### Resepsiyon Dashboard
-![Resepsiyon Dashboard](Otelmvc%20ekranlari/Resepsiyon%20kısmında%20dashboard%20ekranı.png)
+![Resepsiyon Dashboard](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Resepsiyon%20kısmında%20dashboard%20ekranı.png)
 
 ### Resepsiyon – Rezervasyonlar
-![Rezervasyonlar](Otelmvc%20ekranlari/Resepsiyon%20kısmındaki%20rezervasyonlar%20ekranı.png)
+![Rezervasyonlar](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Resepsiyon%20kısmındaki%20rezervasyonlar%20ekranı.png)
 
 ### Resepsiyon – Yeni Rezervasyon
-![Yeni Rezervasyon](Otelmvc%20ekranlari/Resepsiyon%20kısmında%20yeni%20rezervasyon%20ekleme%20sayfası.png)
+![Yeni Rezervasyon](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Resepsiyon%20kısmında%20yeni%20rezervasyon%20ekleme%20sayfası.png)
 
 ### Rezervasyon Düzenleme
-![Rezervasyon Düzenleme](Otelmvc%20ekranlari/Rezervasyon%20düzenleme%20sayfası.png)
+![Rezervasyon Düzenleme](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Rezervasyon%20düzenleme%20sayfası.png)
 
 ### Rezervasyon Silme
-![Rezervasyon Silme](Otelmvc%20ekranlari/Rezervasyon%20silme%20sayfası.png)
+![Rezervasyon Silme](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Rezervasyon%20silme%20sayfası.png)
 
 ### Rezervasyon Ödeme Alma
-![Ödeme Alma](Otelmvc%20ekranlari/Rezervasyon%20ödeme%20alma%20sayfası.png)
+![Ödeme Alma](https://github.com/Nujoud72/OtelYonetimMVC/blob/main/Otelmvc%20ekranları/Rezervasyon%20ödeme%20alma%20sayfası.png)
 
 ---
 ## 🧪 Test Süreci
